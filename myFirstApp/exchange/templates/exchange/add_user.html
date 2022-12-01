@@ -1,0 +1,19 @@
+
+
+<div style="text-align: center;">
+        <form action="{% url 'exchange:addUser' %}" method="post">
+                {% csrf_token %}
+                <fieldset>
+                        <legend>
+                                <h1>Adicionando um Novo Usuario</h1>
+                        </legend>
+                        <label>Nome</label>
+                        <input type="text" name="userName" id="userName">
+                        <label>Senha</label>
+                        <input type="password" name="passWord" id="passWord">
+                        <label>Email</label>
+                        <input type="email" name="userEmail" id="userEmail">
+                </fieldset>
+                <input type="submit" value="Adicionar">
+        </form>
+</div>

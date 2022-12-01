@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Entrar</title>
+<link rel="stylesheet" href="{% static 'login_view.css' %}">
+<script src="{% static 'login_js.js' %}"></script>
+<body>
+    <div class="center" style="text-align: center;">
+        <h2>Login</h2>
+        <form method="post" action="{% url 'exchange:login' %}">
+            {% csrf_token %}
+            <div class="txtField">
+                <input type="email" id="userEmail" name="userEmail" placeholder="" required>
+
+                <label>Email</label>
+            </div>
+            <div class="txtField">
+                <input type="password" id="userPassword" name="userPassword" placeholder="" required>
+
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="login">
+            <div class="signup_link">
+                Not a member? <a href="{% url 'exchange:formUser' %}">Singup</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+</html>

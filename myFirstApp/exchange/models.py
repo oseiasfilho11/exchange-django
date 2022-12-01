@@ -8,6 +8,9 @@ class User(models.Model):
     def __str__(self):
         return f'User name = {self.userName}, User Email = {self.userEmail}'
 
+    def getId(self):
+        return self.id
+
 class Wallet(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     totalBalance = models.FloatField()     

@@ -1,0 +1,11 @@
+{% if user %}
+
+    <div style="text-align: center;">
+        {{ user }}<br>
+        {{ wallet }}<br><br>
+        {% for x in actives %}
+            {{x}}<br>
+        {% endfor %}
+    </div>
+
+{% endif %}
